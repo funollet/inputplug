@@ -16,10 +16,12 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: build
+      - name: debug
+        run: ls -lR
       - name: upload artifact to releases
         uses: alexellis/upload-assets@0.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          asset_paths: '["./target/debug/inputplug"]'
+          asset_paths: '["*"]'
 
