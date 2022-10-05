@@ -22,6 +22,7 @@ jobs:
         uses: alexellis/upload-assets@0.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_STEP_DEBUG: true
         with:
           asset_paths: '["target/debug/inputplug"]'
 
