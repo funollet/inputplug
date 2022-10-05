@@ -1,6 +1,8 @@
-on: [push]
+name: build
 
-name: CI
+on:
+  release:
+    types: [published]
 
 jobs:
   build_and_test:
